@@ -1,0 +1,38 @@
+.animated-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.animated-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Разные типы анимаций */
+.animated-section.fadeUp {
+  transform: translateY(30px);
+}
+
+.animated-section.fadeLeft {
+  transform: translateX(-30px);
+}
+
+.animated-section.fadeRight {
+  transform: translateX(30px);
+}
+
+.animated-section.zoomIn {
+  transform: scale(0.95);
+}
+
+.animated-section.zoomIn.visible {
+  transform: scale(1);
+}
+
+/* Задержки для разных элементов */
+.animated-section.delay-100 { transition-delay: 100ms; }
+.animated-section.delay-200 { transition-delay: 200ms; }
+.animated-section.delay-300 { transition-delay: 300ms; }
+.animated-section.delay-400 { transition-delay: 400ms; }
