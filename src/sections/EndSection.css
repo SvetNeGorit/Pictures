@@ -1,0 +1,40 @@
+.background-container {
+  background-image: url('src/assets/img/frame.svg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* горизонтальное выравнивание */
+  align-items: center; /* вертикальное выравнивание */
+  
+}
+
+.contacts {
+    width: 700px;
+    height: 280px;
+    background-color: #1B1F1B;
+    border-radius: 12px;
+        
+}
+
+.contacts-info-vector {
+    padding-top: 48px; 
+    
+}
+
+.contacts-info {
+
+  font-family: 'RobotoSerif';
+  font-weight: 300;
+  color: #D4D2CC;
+  line-height: 1.3;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 26px;
+}
+
+.vectors-contacts {
+    display: flex;
+   justify-content: center;
+   gap: 30px;
+}

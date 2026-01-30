@@ -1,0 +1,284 @@
+.portfolio-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-title {
+ font-family: 'RobotoSerif';
+ color: #C3DAC3;
+ font-size: 40px;
+ font-weight: 400;
+ text-align: center;
+ padding: 0;
+ margin: 0;
+ 
+}
+
+/* Обертка карусели */
+.carousel-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Основная карусель */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Кнопки навигации */
+.carousel-button {
+  background:#C3DAC3;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.carousel-button:hover {
+  background: #80786E;
+  transform: scale(1.1);
+}
+
+.carousel-button:hover svg {
+  stroke: #C3DAC3;
+}
+
+.carousel-button svg {
+  stroke: #2c3e50;
+  transition: stroke 0.3s ease;
+}
+
+/* Контейнер слайда */
+.slide-container {
+  flex: 1;
+  margin: 0 30px;
+  position: relative;
+  overflow: hidden;
+  padding: 15px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Основное изображение */
+.main-slide {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Миниатюры */
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+}
+
+.thumbnail.active {
+  opacity: 1;
+  border: 3px solid #D4D2CC;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Точечные индикаторы */
+.dots {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #bdc3c7;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  background: #7f8c8d;
+  transform: scale(1.2);
+}
+
+.dot.active {
+  background: #3498db;
+  transform: scale(1.3);
+}
+
+/* Адаптивность */
+
+@media (max-width: 1024px) {
+  .portfolio-title {
+    font-size: 3rem;
+  }
+  
+  .slide-container {
+    min-height: 400px;
+  }
+  
+  .main-slide {
+    max-height: 400px;
+  }
+  
+  .carousel-button {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 30px 15px;
+  }
+  
+  .portfolio-title {
+    font-size: 2.5rem;
+  }
+  
+  .portfolio-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .carousel {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
+  
+  .slide-container {
+    margin: 0;
+    order: -1;
+    min-height: 350px;
+    padding: 10px;
+  }
+  
+  .main-slide {
+    max-height: 350px;
+  }
+  
+  .thumbnails {
+    gap: 10px;
+  }
+  
+  .thumbnail {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .portfolio-subtitle {
+    font-size: 1rem;
+  }
+  
+  .carousel-header {
+    margin-bottom: 40px;
+  }
+  
+  .slide-container {
+    min-height: 300px;
+  }
+  
+  .main-slide {
+    max-height: 300px;
+  }
+  
+  .carousel-button {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .carousel-button svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .thumbnails {
+    gap: 8px;
+  }
+  
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .dots {
+    gap: 10px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}

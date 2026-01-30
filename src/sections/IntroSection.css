@@ -1,0 +1,47 @@
+.container-intro {
+  max-width: 1920px;
+  max-height: 1080px;
+  width: 100%;
+  padding-left: 44px;
+  padding-right: 44px;
+  display: flex; 
+  justify-content: space-between;
+}
+
+
+.intro-text {
+ width: 838px;
+ height: 614px;
+ margin-top: 228px;
+         
+}
+
+.intro-title {
+ font-family: 'RobotoSerif';
+ color: #C3DAC3;
+ font-size: 36px;
+ font-weight: 400;
+ text-align: center;
+ padding-bottom: 62px;
+}
+
+.intro-text-info {
+  font-family: 'RobotoSerif';
+  color: #D4D2CC;
+  font-size: 22px;
+  font-weight: 200;
+  text-align: justify;
+  margin-top: 56px;
+}
+
+.img-AM {
+ margin-top: 290px;
+}
+
+
+.img-decor {
+ margin-top: 88px;
+ width: 700px;
+ height: 902px;
+ 
+}
